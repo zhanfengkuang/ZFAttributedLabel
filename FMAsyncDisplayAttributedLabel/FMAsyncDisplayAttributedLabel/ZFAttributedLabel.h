@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZFAsyncLayer.h"
+
+@class ZFTextLayout;
 
 @interface ZFAttributedLabel : UIView
 
-
+- (void)setTextLayout:(ZFTextLayout *)textLayout;
 
 @end

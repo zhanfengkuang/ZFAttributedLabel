@@ -43,8 +43,8 @@ static dispatch_queue_t ZFAsyncLayerGetReleaseQueue() {
     return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
 }
 
-
-
+@implementation ZFAsyncDisplayTask
+@end
 
 @implementation ZFAsyncLayer
 
