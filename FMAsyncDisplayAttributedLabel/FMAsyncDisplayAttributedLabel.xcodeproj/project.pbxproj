@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C610C73B1F175CE000EE7D5A /* NSMutableAttributedString+ZF.m in Sources */ = {isa = PBXBuildFile; fileRef = C610C73A1F175CE000EE7D5A /* NSMutableAttributedString+ZF.m */; };
 		C6D9D64F1F14A9930074874F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9D64E1F14A9930074874F /* main.m */; };
 		C6D9D6521F14A9930074874F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9D6511F14A9930074874F /* AppDelegate.m */; };
 		C6D9D6551F14A9930074874F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D9D6541F14A9930074874F /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C610C7391F175CE000EE7D5A /* NSMutableAttributedString+ZF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+ZF.h"; sourceTree = "<group>"; };
+		C610C73A1F175CE000EE7D5A /* NSMutableAttributedString+ZF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+ZF.m"; sourceTree = "<group>"; };
 		C6D9D64A1F14A9930074874F /* FMAsyncDisplayAttributedLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMAsyncDisplayAttributedLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D9D64E1F14A9930074874F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6D9D6501F14A9930074874F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				C6D9D6871F1603410074874F /* ZFAttributedLabel.m */,
 				C6D9D6891F1608B30074874F /* ZFTextLayout.h */,
 				C6D9D68A1F1608B30074874F /* ZFTextLayout.m */,
+				C610C7391F175CE000EE7D5A /* NSMutableAttributedString+ZF.h */,
+				C610C73A1F175CE000EE7D5A /* NSMutableAttributedString+ZF.m */,
 				C6D9D6561F14A9930074874F /* Main.storyboard */,
 				C6D9D6591F14A9930074874F /* Assets.xcassets */,
 				C6D9D65B1F14A9930074874F /* LaunchScreen.storyboard */,
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C610C73B1F175CE000EE7D5A /* NSMutableAttributedString+ZF.m in Sources */,
 				C6D9D6821F14AAB60074874F /* ZFAsyncLayer.m in Sources */,
 				C6D9D6881F1603410074874F /* ZFAttributedLabel.m in Sources */,
 				C6D9D6551F14A9930074874F /* ViewController.m in Sources */,
@@ -534,6 +540,7 @@
 				C6D9D6791F14A9940074874F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6D9D67A1F14A9940074874F /* Build configuration list for PBXNativeTarget "FMAsyncDisplayAttributedLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +549,7 @@
 				C6D9D67C1F14A9940074874F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6D9D67D1F14A9940074874F /* Build configuration list for PBXNativeTarget "FMAsyncDisplayAttributedLabelUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +558,7 @@
 				C6D9D67F1F14A9940074874F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
