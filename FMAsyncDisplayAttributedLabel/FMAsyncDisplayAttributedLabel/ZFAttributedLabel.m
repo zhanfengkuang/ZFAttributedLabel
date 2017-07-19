@@ -14,6 +14,7 @@
 @interface ZFAttributedLabel ()
 
 @property (nonatomic, strong) ZFTextLayout *textLayout;
+@property (nonatomic, assign) BOOL ignoreRedraw;
 
 @end
 
@@ -30,12 +31,40 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        
+/*
+ 软件组成：
+    GPU的高并发是为了让它高性能的将不同的纹理合成起来
+    open Graphics(['ɡræfiks]) library (OpenGL)提供一个2D和3D渲染的API。
+ */
+
+/*
+ 硬件参与者：
+    GPU将每一个*frame*合成一个纹理(位图)合成在一块(一秒60次保证不会出现卡顿)
+    合成的纹理被放置到VRAM(显存)
+ 
+ */
+
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+//        
+//    }
+//    return self;
+//    
+//    
+//    
+//}
+
+#pragma mark - private
+- (void)resetTextFrame {
+    if (_textFrame) {
+        CFRelease(_textFrame);
     }
-    return self;
+    [self.layer setNeedsLayout];
+}
+
+#pragma mark - 设置文本
+- (void)setText:(NSString *)text {
 }
 
 #pragma mark - Override
@@ -47,7 +76,7 @@
 - (ZFAsyncDisplayTask *)newAsyncDisplayTask {
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithAttributedString:self.textLayout.attributedString];
     ZFAsyncDisplayTask *task = [ZFAsyncDisplayTask new];
-    __weak __typeof(self)weakSelf = self;
+//    __weak __typeof(self)weakSelf = self;
     task.willDisplay = ^(CALayer * _Nonnull layer) {
         layer.contentsScale = 2;
     };
@@ -65,7 +94,6 @@
     task.didDisplay = ^(CALayer * _Nonnull layer, BOOL finished) {
         
     };
-    
     return task;
 }
 

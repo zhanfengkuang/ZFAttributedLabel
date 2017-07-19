@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class ZFTextLayout;
 
 @interface ZFAttributedLabel : UIView
 
+/**
+ 普通文本
+ */
+@property (nonatomic, copy, nullable) NSString *text;
+
+@property (nonatomic, copy) NSAttributedString *attributedString;
+
 - (void)setTextLayout:(ZFTextLayout *)textLayout;
 
 @end
+
+NS_ASSUME_NONNULL_END
